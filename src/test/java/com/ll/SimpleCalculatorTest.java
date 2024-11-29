@@ -11,7 +11,7 @@ public class SimpleCalculatorTest {
     @DisplayName("1 + 2 = 3") // 테스트 설명
     public void testPlus() {
         SimpleCalculator simpleCalculator = simpleCalculator = new SimpleCalculator();
-        int rs = simpleCalculato.plus(1, 2);
+        int rs = simpleCalculator.plus(1, 2);
 
         assertEquals(3, rs);
     }
