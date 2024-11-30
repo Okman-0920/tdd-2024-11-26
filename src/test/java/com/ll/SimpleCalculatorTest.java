@@ -25,4 +25,15 @@ public class SimpleCalculatorTest {
         assertEquals(12, rs);
     }
 
+    @Test // Test어노테이션 --> 독립적으로 실행가능한 함수가 됨
+    @DisplayName("20 + 10 = 30") // 테스트 설명
+    public void t3() {
+        SimpleCalculator simpleCalculator = simpleCalculator = new SimpleCalculator();
+        int rs = simpleCalculator.plus(20, 10);
+
+        assertEquals(30, rs);
+    }
+
+
+
 }
