@@ -3,7 +3,7 @@ package com.ll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class SimpleCalculatorTest {
 
@@ -13,7 +13,8 @@ public class SimpleCalculatorTest {
         SimpleCalculator simpleCalculator = simpleCalculator = new SimpleCalculator();
         int rs = simpleCalculator.plus(1, 2);
 
-        assertEquals(3, rs);
+        assertThat(rs).isEqualTo(3);
+        // 나는 같음을 단언한다. 3의 기대값을
     }
 
     @Test // Test어노테이션 --> 독립적으로 실행가능한 함수가 됨
@@ -22,7 +23,7 @@ public class SimpleCalculatorTest {
         SimpleCalculator simpleCalculator = simpleCalculator = new SimpleCalculator();
         int rs = simpleCalculator.plus(2, 10);
 
-        assertEquals(12, rs);
+        assertThat(rs).isEqualTo(12);
     }
 
     @Test // Test어노테이션 --> 독립적으로 실행가능한 함수가 됨
@@ -31,7 +32,8 @@ public class SimpleCalculatorTest {
         SimpleCalculator simpleCalculator = simpleCalculator = new SimpleCalculator();
         int rs = simpleCalculator.plus(20, 10);
 
-        assertEquals(30, rs); //test의 성패를 보겠다라는 선언
+        assertThat(rs).isEqualTo(30);
+//        assertEquals(30, rs); //test의 성패를 보겠다라는 선언
     }
 
 
