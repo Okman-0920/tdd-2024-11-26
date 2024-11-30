@@ -31,7 +31,7 @@ public class SimpleCalculatorTest {
         SimpleCalculator simpleCalculator = simpleCalculator = new SimpleCalculator();
         int rs = simpleCalculator.plus(20, 10);
 
-        assertEquals(30, rs);
+        assertEquals(30, rs); //test의 성패를 보겠다라는 선언
     }
 
 
