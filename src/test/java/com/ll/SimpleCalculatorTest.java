@@ -36,6 +36,13 @@ public class SimpleCalculatorTest {
 //        assertEquals(30, rs); //test의 성패를 보겠다라는 선언
     }
 
+    @Test // Test어노테이션 --> 독립적으로 실행가능한 함수가 됨
+    @DisplayName("10 - 5 = 5") // 테스트 설명
+    public void t4() {
+        SimpleCalculator simpleCalculator = simpleCalculator = new SimpleCalculator();
+        int rs = simpleCalculator.minus(10, 5);
 
+        assertThat(rs).isEqualTo(5);
+    }
 
 }
